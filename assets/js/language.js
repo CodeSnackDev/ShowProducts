@@ -77,7 +77,7 @@ function setLanguage(lang) {
   // Update toggle button
   const toggleBtn = document.getElementById('langToggle');
   if (toggleBtn) {
-    toggleBtn.textContent = lang === 'en' ? '🇲🇲' : 'EN';
+    toggleBtn.textContent = lang === 'en' ? '🇲🇲' : '🇬🇧';
     toggleBtn.setAttribute('aria-label', `Switch to ${lang === 'en' ? 'Myanmar' : 'English'}`);
   }
   
