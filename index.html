@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Store · catalog</title>
+  <!-- SEO / Meta -->
+  <meta name="description" content="Premium product catalog template with dark mode, multi-language, wishlist & filters.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/darkmode.css">
+  <!-- Google Font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- sticky header -->
+  <header class="header" role="banner">
+    <div class="container header-grid">
+      <div class="logo"><a href="index.html">✨ brand</a></div>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="categories.html" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" id="themeToggle">🌓</button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language" id="langToggle">🇲🇲</button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">❤️ <span id="wishlistCount" class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-content">
+        <h1 id="heroTitle" data-i18n="hero.title">Discover premium products</h1>
+        <p data-i18n="hero.sub">Minimal, elegant, fast – your new favorite catalog.</p>
+        <div class="hero-search">
+          <input type="search" id="heroSearch" placeholder="Search products..." aria-label="Search" class="search-input" data-i18n-placeholder="search.placeholder">
+          <button class="btn btn-primary" id="heroSearchBtn" data-i18n="hero.searchBtn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats container" aria-label="Statistics">
+      <div class="stat-item"><span class="stat-number" id="statProducts">0</span> <span data-i18n="stats.products">Products</span></div>
+      <div class="stat-item"><span class="stat-number" id="statCategories">0</span> <span data-i18n="stats.categories">Categories</span></div>
+      <div class="stat-item"><span class="stat-number" id="statBrands">0</span> <span data-i18n="stats.brands">Brands</span></div>
+    </section>
+
+    <!-- FEATURED / NEW / TRENDING -->
+    <section class="container" aria-label="Featured products">
+      <div class="section-header">
+        <h2 data-i18n="home.featured">Featured</h2>
+        <a href="products.html" data-i18n="home.viewAll">View all →</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <section class="container" aria-label="Newest products">
+      <div class="section-header">
+        <h2 data-i18n="home.newest">Newest arrivals</h2>
+        <a href="products.html" data-i18n="home.viewAll">View all →</a>
+      </div>
+      <div class="product-grid" id="newestGrid"></div>
+    </section>
+
+    <!-- CATEGORY GRID (home) -->
+    <section class="container" aria-label="Popular categories">
+      <div class="section-header">
+        <h2 data-i18n="home.categories">Popular categories</h2>
+        <a href="categories.html" data-i18n="home.viewAll">View all →</a>
+      </div>
+      <div class="category-grid" id="categoryGridHome"></div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter" aria-label="Newsletter">
+      <div class="container newsletter-inner">
+        <h2 data-i18n="newsletter.title">Stay in the loop</h2>
+        <p data-i18n="newsletter.sub">Get the latest updates and offers.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('📬 Thanks for subscribing!')">
+          <input type="email" placeholder="Your email" required aria-label="Email" data-i18n-placeholder="newsletter.email">
+          <button class="btn btn-primary" data-i18n="newsletter.btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>© 2026 Premium Store</div>
+      <div class="footer-links">
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" data-i18n="footer.privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-top" id="backToTop" aria-label="Back to top">⬆</button>
+
+  <!-- JavaScript -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/filter.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    (async function init() {
+      try {
+        console.log('🚀 Index page initializing...');
+        
+        // Wait for DOM to be fully ready
+        await new Promise(resolve => {
+          if (document.readyState === 'complete') {
+            resolve();
+          } else {
+            window.addEventListener('load', resolve);
+          }
+        });
+        
+        // Load products and categories
+        await loadProductsAndCategories();
+        console.log(`✅ Loaded ${app.products.length} products`);
+        
+        // Load wishlist
+        loadWishlist();
+        
+        // Render components
+        renderFeatured();
+        renderNewest();
+        renderCategoryGridHome();
+        updateStats();
+        updateWishlistBadge();
+        
+        // CRITICAL: Force header navigation update
+        const currentLang = getCurrentLanguage();
+        console.log(`🌐 Current language: ${currentLang}`);
+        
+        // Update header navigation specifically
+        if (typeof updateHeaderNavigation === 'function') {
+          updateHeaderNavigation(currentLang);
+          console.log('✅ Header navigation updated');
+        }
+        
+        // Update all texts
+        if (typeof updateTexts === 'function') {
+          updateTexts(currentLang);
+          console.log('✅ All texts updated');
+        }
+        
+        // Hero search functionality
+        if (typeof initHeroSearch === 'function') {
+          initHeroSearch();
+        }
+        
+        console.log('✅ Index page initialized successfully');
+        
+      } catch (error) {
+        console.error('❌ Error initializing index page:', error);
+      }
+    })();
+  </script>
+</body>
+</html>

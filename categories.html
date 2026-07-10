@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories - Premium Store</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/darkmode.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-grid">
+      <div class="logo"><a href="index.html">✨ brand</a></div>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="categories.html" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" id="themeToggle">🌓</button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language" id="langToggle">🇲🇲</button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">❤️ <span id="wishlistCount" class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding-top:30px;">
+      <div class="section-header">
+        <h1 data-i18n="nav.categories">All Categories</h1>
+      </div>
+      <div class="category-grid" id="allCategoriesGrid"></div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>© 2026 Premium Store</div>
+      <div class="footer-links">
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" data-i18n="footer.privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backToTop" aria-label="Back to top">⬆</button>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (async function init() {
+      await loadProductsAndCategories();
+      loadWishlist();
+      updateWishlistBadge();
+      
+      const grid = document.getElementById('allCategoriesGrid');
+      const categoriesWithCounts = getCategoriesWithCounts();
+      grid.innerHTML = categoriesWithCounts.map(c => `
+        <div class="category-card" onclick="window.location.href='products.html?category=${encodeURIComponent(c.name_en)}'">
+          <div class="icon">${c.icon || '📁'}</div>
+          <div class="name">${getTranslation(c, 'name')}</div>
+          <div class="count">${c.count || 0} products</div>
+        </div>
+      `).join('');
+    })();
+  </script>
+</body>
+</html>

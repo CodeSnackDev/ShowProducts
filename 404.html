@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/darkmode.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-grid">
+      <div class="logo"><a href="index.html">✨ brand</a></div>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" id="themeToggle">🌓</button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language" id="langToggle">🇲🇲</button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">❤️ <span id="wishlistCount" class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="text-align:center;padding:100px 0;">
+      <h1 style="font-size:6rem;color:var(--primary);">404</h1>
+      <h2>Page Not Found</h2>
+      <p style="color:var(--gray);margin:20px 0;">The page you're looking for doesn't exist or has been moved.</p>
+      <a href="index.html" class="btn btn-primary">Go Back Home</a>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>© 2026 Premium Store</div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

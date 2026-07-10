@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Premium Store</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/darkmode.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-grid">
+      <div class="logo"><a href="index.html">✨ brand</a></div>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="categories.html" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" id="themeToggle">🌓</button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language" id="langToggle">🇲🇲</button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">❤️ <span id="wishlistCount" class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding:60px 0;max-width:800px;">
+      <h1>About Premium Store</h1>
+      <p style="font-size:1.2rem;color:var(--gray);margin:20px 0;">Your trusted source for premium products.</p>
+      <p>We offer a curated selection of high-quality products across multiple categories. Our mission is to provide an exceptional shopping experience with a focus on quality, design, and customer satisfaction.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:40px;">
+        <div style="background:var(--white);padding:25px;border-radius:var(--radius);box-shadow:var(--shadow);">
+          <h3>🛍️ 30+ Products</h3>
+          <p style="color:var(--gray);">Curated selection of premium items.</p>
+        </div>
+        <div style="background:var(--white);padding:25px;border-radius:var(--radius);box-shadow:var(--shadow);">
+          <h3>🏷️ 12+ Categories</h3>
+          <p style="color:var(--gray);">Wide variety of product types.</p>
+        </div>
+        <div style="background:var(--white);padding:25px;border-radius:var(--radius);box-shadow:var(--shadow);">
+          <h3>⭐ 4.8 Avg Rating</h3>
+          <p style="color:var(--gray);">Our customers love our products.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>© 2026 Premium Store</div>
+      <div class="footer-links">
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" data-i18n="footer.privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backToTop" aria-label="Back to top">⬆</button>
+
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (async function init() {
+      await loadProductsAndCategories();
+      loadWishlist();
+      updateWishlistBadge();
+    })();
+  </script>
+</body>
+</html>

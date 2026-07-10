@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name_en": "Electronics",
+    "name_mm": "အီလက်ထရွန်းနစ်",
+    "icon": "📱",
+    "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=300&fit=crop",
+    "description_en": "Latest electronics and gadgets",
+    "description_mm": "နောက်ဆုံးပေါ် အီလက်ထရွန်းနစ်နှင့် ကိရိယာများ"
+  },
+  {
+    "id": 2,
+    "name_en": "Wearables",
+    "name_mm": "ဝတ်ဆင်နိုင်သော ပစ္စည်းများ",
+    "icon": "⌚",
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=400&h=300&fit=crop",
+    "description_en": "Smart watches and fitness bands",
+    "description_mm": "စမတ်နာရီများနှင့် ကျန်းမာရေးကြိုးများ"
+  },
+  {
+    "id": 3,
+    "name_en": "Audio",
+    "name_mm": "အသံပစ္စည်းများ",
+    "icon": "🎵",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=300&fit=crop",
+    "description_en": "Headphones, speakers and audio gear",
+    "description_mm": "နားကြပ်များ၊ စပီကာများနှင့် အသံပစ္စည်းများ"
+  },
+  {
+    "id": 4,
+    "name_en": "Computers",
+    "name_mm": "ကွန်ပျူတာများ",
+    "icon": "💻",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop",
+    "description_en": "Laptops, desktops and peripherals",
+    "description_mm": "လက်တော့ပ်များ၊ ဒက်စ်တော့များနှင့် ဆက်စပ်ပစ္စည်းများ"
+  },
+  {
+    "id": 5,
+    "name_en": "Cameras",
+    "name_mm": "ကင်မရာများ",
+    "icon": "📷",
+    "image": "https://images.unsplash.com/photo-1452780212940-6f5c0d14d848?w=400&h=300&fit=crop",
+    "description_en": "Cameras, lenses and accessories",
+    "description_mm": "ကင်မရာများ၊ မှန်ဘီလူးများနှင့် ဆက်စပ်ပစ္စည်းများ"
+  },
+  {
+    "id": 6,
+    "name_en": "Smart Home",
+    "name_mm": "စမတ်အိမ်",
+    "icon": "🏠",
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop",
+    "description_en": "Smart home devices and automation",
+    "description_mm": "စမတ်အိမ်ကိရိယာများနှင့် အလိုအလျောက်စနစ်"
+  },
+  {
+    "id": 7,
+    "name_en": "Accessories",
+    "name_mm": "ဆက်စပ်ပစ္စည်းများ",
+    "icon": "🎒",
+    "image": "https://images.unsplash.com/photo-1547941126-7d5322b218b0?w=400&h=300&fit=crop",
+    "description_en": "Cables, chargers and more",
+    "description_mm": "ကြိုးများ၊ အားသွင်းကိရိယာများနှင့် အခြားပစ္စည်းများ"
+  },
+  {
+    "id": 8,
+    "name_en": "Transportation",
+    "name_mm": "သယ်ယူပို့ဆောင်ရေး",
+    "icon": "🛴",
+    "image": "https://images.unsplash.com/photo-1560622299-3c7a8e7f0cca?w=400&h=300&fit=crop",
+    "description_en": "Electric scooters and bikes",
+    "description_mm": "လျှပ်စစ်စကူတာများနှင့် စက်ဘီးများ"
+  },
+  {
+    "id": 9,
+    "name_en": "Furniture",
+    "name_mm": "ပရိဘောဂ",
+    "icon": "🪑",
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop",
+    "description_en": "Home and office furniture",
+    "description_mm": "အိမ်နှင့် ရုံးပရိဘောဂများ"
+  },
+  {
+    "id": 10,
+    "name_en": "Fitness",
+    "name_mm": "ကျန်းမာရေး",
+    "icon": "💪",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop",
+    "description_en": "Fitness equipment and gear",
+    "description_mm": "ကျန်းမာရေးပစ္စည်းများနှင့် ကိရိယာများ"
+  },
+  {
+    "id": 11,
+    "name_en": "Home",
+    "name_mm": "အိမ်",
+    "icon": "🏡",
+    "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop",
+    "description_en": "Home appliances and decor",
+    "description_mm": "အိမ်သုံးပစ္စည်းများနှင့် အလှဆင်ပစ္စည်းများ"
+  },
+  {
+    "id": 12,
+    "name_en": "Gaming",
+    "name_mm": "ဂိမ်းကစားခြင်း",
+    "icon": "🎮",
+    "image": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=300&fit=crop",
+    "description_en": "Gaming accessories and gear",
+    "description_mm": "ဂိမ်းဆက်စပ်ပစ္စည်းများနှင့် ကိရိယာများ"
+  }
+]

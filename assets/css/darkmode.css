@@ -1,0 +1,161 @@
+/* ============================================
+   DARK MODE - IMPROVED
+   ============================================ */
+body.dark {
+  --light: #1a1a2e;
+  --dark: #e8e8e8;
+  --white: #16213e;
+  --gray-light: #2a2a4a;
+  --gray: #a0a0b8;
+  --shadow: 0 10px 30px rgba(0,0,0,0.3);
+  --shadow-hover: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+body.dark .header {
+  background: var(--white);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+body.dark .product-card {
+  background: var(--white);
+}
+
+body.dark .category-card {
+  background: var(--white);
+}
+
+body.dark .stat-item {
+  background: var(--white);
+}
+
+body.dark .search-input {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .search-input::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+
+body.dark .search-input:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--primary);
+}
+
+body.dark .icon-btn {
+  color: var(--dark);
+}
+
+body.dark .icon-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+body.dark .nav a {
+  color: var(--dark);
+}
+
+body.dark .nav a::after {
+  background: var(--primary);
+}
+
+body.dark .footer {
+  background: #0f0f1a;
+}
+
+body.dark .newsletter {
+  background: #0f0f1a;
+}
+
+body.dark .product-card .card-actions button {
+  background: rgba(30,30,60,0.9);
+  color: white;
+}
+
+body.dark .product-card .card-actions button:hover {
+  background: var(--primary);
+}
+
+body.dark .skeleton {
+  background: linear-gradient(90deg, #2a2a4a 25%, #3a3a5a 50%, #2a2a4a 75%);
+}
+
+/* ============================================
+   DARK MODE - SELECT / DROPDOWN FIX
+   ============================================ */
+body.dark select,
+body.dark .filters select {
+  background-color: #2a2a4a;
+  color: #e8e8e8;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+body.dark select option,
+body.dark .filters select option {
+  background-color: #1a1a2e;
+  color: #e8e8e8;
+}
+
+body.dark select:hover,
+body.dark .filters select:hover {
+  border-color: var(--primary);
+}
+
+body.dark select:focus,
+body.dark .filters select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.3);
+}
+
+/* Dark mode - form elements */
+body.dark input,
+body.dark textarea,
+body.dark .filters input,
+body.dark .filters textarea {
+  background-color: rgba(255,255,255,0.08);
+  color: #e8e8e8;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark input:focus,
+body.dark textarea:focus {
+  border-color: var(--primary);
+  background-color: rgba(255,255,255,0.12);
+}
+
+body.dark .filters {
+  background: var(--white);
+}
+
+body.dark .filters label {
+  color: var(--dark);
+}
+
+body.dark .filters .btn-outline {
+  border-color: var(--gray);
+  color: var(--dark);
+}
+
+body.dark .filters .btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Dark mode - product detail */
+body.dark .product-detail .info .meta {
+  color: var(--gray);
+}
+
+body.dark .product-detail .info .specs dd {
+  color: var(--gray);
+}
+
+body.dark .product-detail .gallery .thumbnails img {
+  border-color: rgba(255,255,255,0.1);
+}
+
+body.dark .product-detail .gallery .thumbnails img:hover {
+  border-color: var(--primary);
+}

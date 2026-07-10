@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Premium Store</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/darkmode.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <style>
+    .product-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 40px 0;
+    }
+    .product-detail .gallery .main-img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .product-detail .gallery .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .product-detail .gallery .thumbnails img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+    .product-detail .gallery .thumbnails img:hover {
+      border-color: var(--primary);
+    }
+    .product-detail .info h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .product-detail .info .meta {
+      color: var(--gray);
+      margin-bottom: 15px;
+    }
+    .product-detail .info .price-large {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .product-detail .info .description {
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    @media (max-width: 768px) {
+      .product-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px 0;
+      }
+      .product-detail .info h1 {
+        font-size: 1.8rem;
+      }
+      .product-detail .gallery .thumbnails img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    /* Loading skeleton */
+    .skeleton-product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      padding: 40px 0;
+    }
+    .skeleton-product .skeleton-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: var(--radius);
+      background: linear-gradient(90deg, var(--gray-light) 25%, #f0f0f0 50%, var(--gray-light) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    .skeleton-product .skeleton-text {
+      height: 20px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(90deg, var(--gray-light) 25%, #f0f0f0 50%, var(--gray-light) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      margin-bottom: 15px;
+    }
+    .skeleton-product .skeleton-text.short {
+      width: 60%;
+    }
+    .skeleton-product .skeleton-text.medium {
+      width: 80%;
+    }
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    @media (max-width: 768px) {
+      .skeleton-product {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-grid">
+      <div class="logo"><a href="index.html">✨ brand</a></div>
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="categories.html" data-i18n="nav.categories">Categories</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" id="themeToggle">🌓</button>
+        <button class="icon-btn lang-toggle" aria-label="Toggle language" id="langToggle">🇲🇲</button>
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">❤️ <span id="wishlistCount" class="badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" id="productDetail" style="padding:30px 0;min-height:400px;">
+      <!-- Skeleton Loader -->
+      <div class="skeleton-product" id="skeletonLoader">
+        <div>
+          <div class="skeleton-img"></div>
+          <div style="display:flex;gap:10px;margin-top:15px;">
+            <div class="skeleton-img" style="width:80px;height:80px;border-radius:var(--radius-sm);"></div>
+            <div class="skeleton-img" style="width:80px;height:80px;border-radius:var(--radius-sm);"></div>
+            <div class="skeleton-img" style="width:80px;height:80px;border-radius:var(--radius-sm);"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-text" style="height:40px;width:80%;"></div>
+          <div class="skeleton-text" style="height:25px;width:60%;"></div>
+          <div class="skeleton-text" style="height:35px;width:40%;"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text medium"></div>
+          <div class="skeleton-text" style="height:100px;"></div>
+          <div style="display:flex;gap:10px;margin-top:20px;">
+            <div class="skeleton-text" style="height:50px;width:150px;"></div>
+            <div class="skeleton-text" style="height:50px;width:150px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>© 2026 Premium Store</div>
+      <div class="footer-links">
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" data-i18n="footer.privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backToTop" aria-label="Back to top">⬆</button>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    (async function init() {
+      try {
+        console.log('🚀 Product page initializing...');
+        
+        // Show skeleton loader
+        const skeleton = document.getElementById('skeletonLoader');
+        if (skeleton) skeleton.style.display = 'block';
+        
+        // Load products and categories FIRST
+        await loadProductsAndCategories();
+        console.log(`✅ Loaded ${app.products.length} products`);
+        
+        // Load wishlist
+        loadWishlist();
+        updateWishlistBadge();
+        
+        // Initialize theme
+        initTheme();
+        
+        // Initialize language
+        initLanguage();
+        
+        // Hide skeleton
+        if (skeleton) skeleton.style.display = 'none';
+        
+        // Handle product routing - this renders the product
+        handleProductRouting();
+        
+        console.log('✅ Product page initialized successfully');
+      } catch (error) {
+        console.error('❌ Error initializing product page:', error);
+        // Hide skeleton and show error
+        const skeleton = document.getElementById('skeletonLoader');
+        if (skeleton) skeleton.style.display = 'none';
+        
+        const container = document.getElementById('productDetail');
+        if (container) {
+          container.innerHTML = `
+            <div style="text-align:center;padding:60px 0;">
+              <h2 style="font-size:3rem;">⚠️</h2>
+              <h2>Error Loading Product</h2>
+              <p style="color:var(--gray);">Please try again later.</p>
+              <a href="products.html" class="btn btn-primary" style="margin-top:20px;">Browse Products</a>
+            </div>
+          `;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "categories": "Categories",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Discover premium products",
+    "sub": "Minimal, elegant, fast – your new favorite catalog.",
+    "searchBtn": "Search"
+  },
+  "stats": {
+    "products": "Products",
+    "categories": "Categories",
+    "brands": "Brands"
+  },
+  "home": {
+    "featured": "Featured Products",
+    "newest": "Newest Arrivals",
+    "categories": "Popular Categories",
+    "viewAll": "View all →"
+  },
+  "newsletter": {
+    "title": "Stay in the loop",
+    "sub": "Get the latest updates and offers.",
+    "btn": "Subscribe",
+    "email": "Your email"
+  },
+  "footer": {
+    "privacy": "Privacy Policy"
+  },
+  "product": {
+    "details": "Product Details",
+    "related": "Related Products",
+    "back": "Back to Products",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "addToWishlist": "Add to Wishlist",
+    "removeFromWishlist": "Remove from Wishlist"
+  },
+  "filter": {
+    "title": "Filter Products",
+    "category": "Category",
+    "brand": "Brand",
+    "price": "Price Range",
+    "rating": "Minimum Rating",
+    "availability": "Availability",
+    "sort": "Sort By",
+    "reset": "Reset Filters",
+    "apply": "Apply Filters"
+  },
+  "sort": {
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "priceLow": "Price: Low to High",
+    "priceHigh": "Price: High to Low",
+    "az": "A-Z",
+    "za": "Z-A",
+    "rating": "Best Rating"
+  },
+  "wishlist": {
+    "title": "My Wishlist",
+    "empty": "Your wishlist is empty",
+    "emptySub": "Start adding products you love!",
+    "browse": "Browse Products"
+  },
+  "search": {
+    "placeholder": "Search products..."
+  }
+}
